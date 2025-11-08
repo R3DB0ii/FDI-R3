@@ -11,14 +11,14 @@ void clean_buffer(void) {
     while (getchar() != '\n' && getchar() != EOF);
 }
 
-void populate_vector(int *v, int size){
+void vec_Populate(int *v, int size){
     for(int i=0; i<size; i++){
         scanf("%d", &v[i]);
     }
     clean_buffer();
 }
 
-int vecHasDupVals(int* v, int size) {
+int vec_HasDupVals(int* v, int size) {
     int flag=0;
     for (int i=0; i<size-1; i++) {
         for (int j=i+1; j<size; j++) {
@@ -35,6 +35,6 @@ int main() {
     clean_buffer();
     printf("Valori: ");
     int vec[vec_dim];
-    populate_vector(vec, vec_dim);
-    printf(vecHasDupVals(vec, vec_dim) ? "Il vettore contiene più componenti uguali" : "Il vettore NON ha componenti uguali tra loro");
+    vec_Populate(vec, vec_dim);
+    printf(vec_HasDupVals(vec, vec_dim) ? "Il vettore contiene più componenti uguali" : "Il vettore NON ha componenti uguali tra loro");
 }

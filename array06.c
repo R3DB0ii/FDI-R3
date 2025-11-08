@@ -13,14 +13,14 @@ void clean_buffer(void) {
     while (getchar() != '\n' && getchar() != EOF);
 }
 
-void populate_vector(int *v, int size){
+void vec_Populate(int *v, int size){
     for(int i=0; i<size; i++){
         scanf("%d", &v[i]);
     }
     clean_buffer();
 }
 
-void cpVecWOVal(int* vin, int size, int val, int* vout){
+void vec_CpWOVal(int* vin, int size, int val, int* vout){
     int k=0;
     for(int i=0; i<size; i++){
         if(vin[i]!=val){
@@ -30,7 +30,7 @@ void cpVecWOVal(int* vin, int size, int val, int* vout){
     }
 }
 
-int vecValsEqualTo(int* v, int size, int val){
+int vec_ValsEqualTo(int* v, int size, int val){
     int k=0;
     for(int i=0; i<size; i++){
         if(v[i]==val) k++;
@@ -38,7 +38,7 @@ int vecValsEqualTo(int* v, int size, int val){
     return k;
 }
 
-void vecPrint(int* v, int size){
+void vec_Print(int* v, int size){
     for(int i=0; i<size; i++){
         printf("%d ", v[i]);
     }
@@ -52,15 +52,15 @@ int main() {
     clean_buffer();
     printf("Valori: ");
     int vec[vec_dim];
-    populate_vector(vec, vec_dim);
+    vec_Populate(vec, vec_dim);
     printf("Valore da eliminare: ");
     scanf("%d", &val);
     clean_buffer();
-    int occurencies = vecValsEqualTo(vec, vec_dim, val);
+    int occurencies = vec_ValsEqualTo(vec, vec_dim, val);
     int new_dim = vec_dim - occurencies;
     int new[new_dim];
-    cpVecWOVal(vec, vec_dim, val, new);
-    vecPrint(new, new_dim);
+    vec_CpWOVal(vec, vec_dim, val, new);
+    vec_Print(new, new_dim);
     printf("Valore %d eliminato %d volta/e\n", val, occurencies);
     return 0;
 }

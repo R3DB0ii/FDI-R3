@@ -10,14 +10,14 @@ void clean_buffer(void) {
     while (getchar() != '\n' && getchar() != EOF);
 }
 
-void populate_vector(int *v, int size){
+void vec_Populate(int *v, int size){
     for(int i=0; i<size; i++){
         scanf("%d", &v[i]);
     }
     clean_buffer();
 }
 
-int vec_scalar_prod(int* v1, int* v2, int size){
+int vec_ScalarProd(int* v1, int* v2, int size){
     int res=0;
     for(int i=0; i<size; i++){
         res += v1[i]*v2[i];
@@ -32,10 +32,10 @@ int main() {
     clean_buffer();
     printf("Primo vettore: ");
     int vec1[vec_dim];
-    populate_vector(vec1, vec_dim);
+    vec_Populate(vec1, vec_dim);
     printf("Secondo vettore: ");
     int vec2[vec_dim];
-    populate_vector(vec2, vec_dim);
-    printf("Prodotto scalare tra v1 e v2: %d", vec_scalar_prod(vec1, vec2, vec_dim));
+    vec_Populate(vec2, vec_dim);
+    printf("Prodotto scalare tra v1 e v2: %d", vec_ScalarProd(vec1, vec2, vec_dim));
     return 0;
 }

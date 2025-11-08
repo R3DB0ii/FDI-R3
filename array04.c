@@ -11,14 +11,14 @@ void clean_buffer(void) {
     while (getchar() != '\n' && getchar() != EOF);
 }
 
-void populate_vector(int *v, int size){
+void vec_Populate(int *v, int size){
     for(int i=0; i<size; i++){
         scanf("%d", &v[i]);
     }
     clean_buffer();
 }
 
-int isVecGrowing(int* v, int vec_dim) {
+int vec_IsOrdered(int* v, int vec_dim) {
     int ret=0;
     int prev=v[0];
     for(int i=0; i<vec_dim; i++){
@@ -35,7 +35,7 @@ int main() {
     clean_buffer();
     printf("Valori: ");
     int vec[vec_dim];
-    populate_vector(vec, vec_dim);
-    printf((isVecGrowing(vec, vec_dim) ? "Il vettore ha valori crescenti\n" : "Il vettore NON ha valori crescenti\n"));
+    vec_Populate(vec, vec_dim);
+    printf((vec_IsOrdered(vec, vec_dim) ? "Il vettore ha valori crescenti\n" : "Il vettore NON ha valori crescenti\n"));
     return 0;
 }
