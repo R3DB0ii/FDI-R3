@@ -17,7 +17,7 @@ void vec_Populate(int *v, int size){
     clean_buffer();
 }
 
-void vec_CpWOElem(int* vin, int size, int index, int* vout){
+void vec_Cp_WOElem(int* vin, int size, int index, int* vout){
     int k=0;
     for(int i=0; i<size; i++){
         if(i!=index){
@@ -46,7 +46,7 @@ int main() {
     scanf("%d", &index);
     clean_buffer();
     int new[vec_dim-1];
-    vec_CpWOElem(vec, vec_dim, index, new);
+    vec_Cp_WOElem(vec, vec_dim, index, new);
     vec_Print(new, vec_dim-1);
     return 0;
 }

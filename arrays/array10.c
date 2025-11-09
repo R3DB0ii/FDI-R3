@@ -12,7 +12,7 @@ void matrix2d_SetToIdentity(int* m, int dim){
     }
 }
 
-void matrix2d_Print(int* m, int rows, int cols){
+void matrix2d_Print_Grid(int* m, int rows, int cols){
     for(int i=0; i<rows; i++){
         for(int k=0; k<cols; k++) printf("+-------");
         printf("+\n");
@@ -31,6 +31,6 @@ int main(){
     scanf("%d", &dim);
     int matrix[dim*dim];
     matrix2d_SetToIdentity(matrix, dim);
-    matrix2d_Print(matrix, dim, dim);
+    matrix2d_Print_Grid(matrix, dim, dim);
     return 0;
 }

@@ -20,7 +20,7 @@ void vec_Populate(int *v, int size){
     clean_buffer();
 }
 
-void vec_CpWOVal(int* vin, int size, int val, int* vout){
+void vec_Cp_WOVal(int* vin, int size, int val, int* vout){
     int k=0;
     for(int i=0; i<size; i++){
         if(vin[i]!=val){
@@ -59,7 +59,7 @@ int main() {
     int occurencies = vec_ValsEqualTo(vec, vec_dim, val);
     int new_dim = vec_dim - occurencies;
     int new[new_dim];
-    vec_CpWOVal(vec, vec_dim, val, new);
+    vec_Cp_WOVal(vec, vec_dim, val, new);
     vec_Print(new, new_dim);
     printf("Valore %d eliminato %d volta/e\n", val, occurencies);
     return 0;

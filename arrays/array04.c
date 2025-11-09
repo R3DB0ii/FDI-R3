@@ -18,7 +18,7 @@ void vec_Populate(int *v, int size){
     clean_buffer();
 }
 
-int vec_IsOrdered(int* v, int vec_dim) {
+int vec_isOrdered(int* v, int vec_dim) {
     int ret=0;
     int prev=v[0];
     for(int i=0; i<vec_dim; i++){
@@ -36,6 +36,6 @@ int main() {
     printf("Valori: ");
     int vec[vec_dim];
     vec_Populate(vec, vec_dim);
-    printf((vec_IsOrdered(vec, vec_dim) ? "Il vettore ha valori crescenti\n" : "Il vettore NON ha valori crescenti\n"));
+    printf((vec_isOrdered(vec, vec_dim) ? "Il vettore ha valori crescenti\n" : "Il vettore NON ha valori crescenti\n"));
     return 0;
 }

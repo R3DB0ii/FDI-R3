@@ -18,7 +18,7 @@ void vec_Populate(int *v, int size){
     clean_buffer();
 }
 
-int vec_HasDupVals(int* v, int size) {
+int vec_hasDupVals(int* v, int size) {
     int flag=0;
     for (int i=0; i<size-1; i++) {
         for (int j=i+1; j<size; j++) {
@@ -36,5 +36,5 @@ int main() {
     printf("Valori: ");
     int vec[vec_dim];
     vec_Populate(vec, vec_dim);
-    printf(vec_HasDupVals(vec, vec_dim) ? "Il vettore contiene più componenti uguali" : "Il vettore NON ha componenti uguali tra loro");
+    printf(vec_hasDupVals(vec, vec_dim) ? "Il vettore contiene più componenti uguali" : "Il vettore NON ha componenti uguali tra loro");
 }
