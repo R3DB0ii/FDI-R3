@@ -24,17 +24,29 @@ void matrix2d_Fill_Tartaglia(int *m, int rows){
         for(int j=0; j<rows; j++){
             if(i*rows+j!=0) m[i*rows+j]=0;
             if(i>0){
-                if(j==0){
-                    m[i*rows]=1;
-                } else {
-                    m[i*rows+j]=m[(i-1)*rows+j]+m[(i-1)*rows+j-1];
-                }
+                if(j==0) m[i*rows]=1;
+                else m[i*rows+j]=m[(i-1)*rows+j]+m[(i-1)*rows+j-1];
             }
         }
     }
 }
 
-void matrix2d_Print_asPyramid_up(int* m, int rows){
+void matrix2d_Print_asPyramid_up(int* m, int rows) {
+    int base=(rows*2)-1;
+    for(int i=0; i<rows; i++) {
+        int k=0;
+        for(int p=0; p<rows-i; p++) printf(" ");
+        for(int j=0; j<=base; j++) {
+            if((j+1>=rows-i && j<=rows+i)){
+                if(i%2==0 && j%2!=0) printf((m[i*rows+k]>9) ? (m[i*rows+k+1])>99 ? "%d " : "%d  " : "%d   ", m[i*rows+k++]);
+                else if(i%2!=0 && j%2==0) printf((m[i*rows+k]>9) ? (m[i*rows+k+1])>99 ? "%d " : "%d  " : "%d   ", m[i*rows+k++]);
+            } else printf(" ");
+        }
+        if(i<(rows-1)) printf("\n");
+    }
+}
+
+/*void matrix2d_Print_asPyramid_up(int* m, int rows){
     int base=2*rows-1;
     for(int i=0; i<rows; i++){
         int k=0;
@@ -58,7 +70,7 @@ void matrix2d_Print_asPyramid_up(int* m, int rows){
         printf("\n");
     }
 }
-
+*/
 int main() {
     int rows;
     printf("Righe matrice: ");
