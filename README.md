@@ -1,6 +1,3 @@
-
-
-
 # FDI-R3 — Fondamenti di Informatica (Università di Roma Tre)
 
 Questo repository raccoglie una serie di esercizi svolti per il corso di **Fondamenti di Informatica** dell’Università di Roma Tre, assegnati dal professor **Giordano Da Lozzo** durante l’anno accademico **2025–2026**.
@@ -10,7 +7,7 @@ L’obiettivo è fornire uno spazio ordinato in cui consultare le soluzioni real
 ---
 
 ## ⚠️ Nota importante
-[[!IMPORTANT]]
+[!IMPORTANT]
 Le soluzioni presenti ==**non rappresentano necessariamente l’unico modo corretto**== per risolvere gli esercizi.  
 Ogni problema può essere affrontato con strategie differenti, talvolta più eleganti o più efficienti.  
 Le implementazioni qui riportate vogliono essere soltanto un riferimento, non un modello assoluto.
