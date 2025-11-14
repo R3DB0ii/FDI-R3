@@ -7,10 +7,10 @@ L’obiettivo è fornire uno spazio ordinato in cui consultare le soluzioni real
 ---
 
 ## ⚠️ Nota importante
-[!IMPORTANT]
-Le soluzioni presenti ==**non rappresentano necessariamente l’unico modo corretto**== per risolvere gli esercizi.  
-Ogni problema può essere affrontato con strategie differenti, talvolta più eleganti o più efficienti.  
-Le implementazioni qui riportate vogliono essere soltanto un riferimento, non un modello assoluto.
+> [!IMPORTANT]
+> Le soluzioni presenti **<mark>non rappresentano necessariamente l’unico modo corretto</mark>** per risolvere gli esercizi.  
+> Ogni problema può essere affrontato con strategie differenti, talvolta più eleganti o più efficienti.  
+> Le implementazioni qui riportate vogliono essere soltanto un riferimento, non un modello assoluto.
 
 ---
 
