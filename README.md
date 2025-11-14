@@ -34,5 +34,7 @@ Questo repository è un’iniziativa personale di uno studente, con l’unico sc
 
 ---
 
-Contributi, idee e soluzioni alternative sono naturalmente benvenuti.
+Contributi, idee e soluzioni alternative sono naturalmente benvenute.
+Sentitevi liberi di contattarmi a personal@mamiliano.club oppure a dellarosalavoro@gmail.com
 
+Buono Studio
