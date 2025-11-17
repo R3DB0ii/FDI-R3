@@ -12,6 +12,15 @@ L’obiettivo è fornire uno spazio ordinato in cui consultare le soluzioni real
 > Ogni problema può essere affrontato con strategie differenti, talvolta più eleganti o più efficienti.  
 > Le implementazioni qui riportate vogliono essere soltanto un riferimento, non un modello assoluto.
 
+
+> !WARNING
+> Questi sorgenti sono stati compilati e testati su sistema UNIX (Debian GNU/Linux 12, 6.12.47+rpt-rpi-v8),
+> dunque non si garantisce la completa compatibilità con macchine Windows. I possibili problemi possono consistere
+> in:
+>
+> - Visualizzazione errata dei caratteri ASCII accentati o non nativi di ASCII non esteso
+> - Problemi con l'antivirus a causa di funzioni di input testuale come scanf (in caso di problemi sostituire con scanf_s)
+
 ---
 
 ## 📂 Contenuto del repository
