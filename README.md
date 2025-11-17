@@ -13,7 +13,7 @@ L’obiettivo è fornire uno spazio ordinato in cui consultare le soluzioni real
 > Le implementazioni qui riportate vogliono essere soltanto un riferimento, non un modello assoluto.
 
 
-> !WARNING
+> [!WARNING]
 > Questi sorgenti sono stati compilati e testati su sistema UNIX (Debian GNU/Linux 12, 6.12.47+rpt-rpi-v8),
 > dunque non si garantisce la completa compatibilità con macchine Windows. I possibili problemi possono consistere
 > in:
