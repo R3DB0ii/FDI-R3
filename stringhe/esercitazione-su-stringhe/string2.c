@@ -7,9 +7,22 @@ Task 2: Una funzione main chiede all'utente di inserire una stringa da tastiera 
 #include <stdio.h>
 #include <string.h>
 
-void numeriNascosti(char* str){
-    for(int i=0; i<strlen(str); i++){
-        if(str[i]>='0'&&str[i]<='9') str[i]='*';
+void numeriNascosti(char* s){
+    int prev=0;
+    int len=strlen(s);
+    for(int i=0; i<len; i++){
+        if(s[i]>='0'&&s[i]<='9'){
+            if(prev!=1){
+                s[i]='*';
+                prev=1;
+            } else {
+                for(int j=i; j<len; j++){
+                    s[j]=s[j+1];
+                }
+                len--;
+                i--;
+            }
+        } else prev=0;
     }
 }
 
